@@ -259,7 +259,7 @@ footer {
     margin: 40px;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 600px) {
   .conteudo {
     grid-template-columns: 1fr;
     margin-top: -20px;
@@ -274,8 +274,7 @@ footer {
     text-align: center;
   }
   .fit img {
-    width: 100%;
-    margin-bottom: 80px;
+    max-width: 100%;
   }
   .menu {
     font-size: 0.8rem;
