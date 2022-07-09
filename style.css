@@ -52,9 +52,9 @@ body {
 .menu {
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   align-self: center;
 }
 .menu li {
@@ -66,7 +66,7 @@ body {
   width: 100px;
   text-align: center;
   gap: 10px;
-  display: block;
+  display: inline-block;
   padding: 10px 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -118,6 +118,7 @@ body {
   align-items: center;
   border-radius: 20px;
   box-shadow: inset 1px 2px 4px #646464;
+  margin: 18px;
 }
 .conteudo {
   display: grid;
@@ -228,12 +229,17 @@ footer {
   }
   .descricao-item p {
     max-width: 400px;
+    text-align: center;
+    margin-bottom: 12px;
   }
   .descricao-item {
     width: 100%;
     margin: 30px;
     justify-items: center;
     text-align: center;
+  }
+  .fit {
+    margin-bottom: 40px;
   }
   .fit img {
     max-width: 100%;
@@ -247,16 +253,16 @@ footer {
     justify-content: center;
   }
   .topico-vantagens {
-    grid-template-columns: 0;
+    grid-template-columns: 1fr;
     max-width: 400px;
     text-align: center;
+    gap: 20px;
   }
   .topico-vantagens img {
     display: inline-block;
   }
   #label-vantagens {
     text-align: center;
-    margin: 40px;
   }
 }
 @media (max-width: 600px) {
@@ -264,8 +270,12 @@ footer {
     grid-template-columns: 1fr;
     margin-top: -20px;
   }
+  .descricao-item h2 {
+    font-size: 1.3rem;
+  }
   .descricao-item p {
     max-width: 400px;
+    font-size: 0.8rem;
   }
   .descricao-item {
     width: 100%;
@@ -275,28 +285,45 @@ footer {
   }
   .fit img {
     max-width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
   .menu {
     font-size: 0.8rem;
     gap: 5px;
     align-self: center;
-    grid-template-columns: auto;
+    flex-wrap: wrap;
   }
   .cabecalio {
     justify-content: center;
     gap: 0;
     margin: 0;
   }
-  .topico-vantagens p,
-  .topico-vantagens {
-    grid-template-columns: 1fr;
+
+  .topico-vantagens h2 {
+    font-size: 1rem;
+  }
+  .topico-vantagens p {
+    font-size: 0.8rem;
+    margin-top: 0px;
     text-align: center;
+    grid-column: initial;
+  }
+  .topico-vantagens {
+    grid-template-columns: initial;
+    text-align: center;
+    gap: 10px;
   }
   .topico-vantagens img {
     display: inline-block;
+    justify-self: center;
   }
   #label-vantagens {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 0px;
+  }
+  .topico {
+    padding: 10px;
   }
 }
